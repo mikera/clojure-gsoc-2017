@@ -45,6 +45,37 @@ If you cannot submit the project as a pull request, please submit it to:
 
 ### Clojure
 
+### Clojure Numerics
+
+#### Clojure OpenCL
+
+**Brief explanation:**
+We have a growing ecosystem of numerical code in Clojure, based around core.matrix (which will be an oficial Clojure Contrib library in the near future). However we don't yet have a well-integrated library for array computing on the GPU, which is an important capability for high performance numerical computing and deep learning.
+
+The goal of this project is to develop a fully working, optimised core.matrix implementation on the GPU using OpenCL (which will provide compatibility with most modern GPUs). 
+
+There is an initial experimental project (https://github.com/mikera/vectorz-opencl) which could serve as a framework to be developed into a full implementation, although other options could also be considered.
+
+**Expected results:**
+The end result should be a fully compatible core.matrix implementation running on the GPU with OpenCL, with optimisations for all of the most common numerical computing operations. This should include at a minimum:
+
+- Matrix/vector/array muliplications
+- Elementwise operations (add, muliply, negate, log etc.)
+- Functional operations (map, reduce etc.)
+
+As a stretch goal, it could be possible to compile some subsets of Clojure expressions into efficient GPU code.
+
+**Knowledge prerequisite:**
+Key knowledge required:
+
+- Clojure
+- Java
+- Familiarity with array-based numerical programming (e.g. Numpy)
+- Some GPU computing experience (needed to write OpenCL kernels)
+
+**Mentor:**
+Mike Anderson
+
 ### ClojureScript
 
 ### Typed Clojure
